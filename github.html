@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Git</title>
+       <link rel="stylesheet" href="git.css">
+  </head>
+  <body>
+
+<nav id="navbar">
+  <header>  GitHub</header>
+  <img src="gi.png" alt="git">
+  <ul>
+   
+    <li>
+      <a class="nav-link" href="#What_is_GitHub">What is GitHub</a>
+    </li>
+    <li><a class="nav-link" href="#How_gH_pages_are_used">Create a repo</a></li>
+    <li><a class="nav-link" href="#Import_your_code_to_GitHub">Import your code to GitHub</a></li>
+    <li><a class="nav-link" href="#References">References</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class"main-section" Id="What_is_GitHub">
+    <header>What is GitHub</header>
+    <article>
+      <p class="description">
+        GitHub is a forge (collaborative development platform) to host projects using the Git version control system. It is mainly used for the creation of source code of computer programs. The software that operates GitHub was written in Ruby on Rails. Since January 2010, GitHub operates under the name of GitHub, Inc. It was previously known as Logical Awesome LLC. The code of projects hosted on GitHub is typically stored publicly, although using a paid account, it also allows you to host private repositories.
+
+        On June 4, 2018, Microsoft bought GitHub for the amount of 7.5 billion dollars.</p>
+        <p>Github is a very important and useful community to get involved with, and Git / GitHub is a very popular version control system - most technology companies now use it in their workflow. GitHub has a very useful feature called GitHub pages, which allows you to publish the site code live on the Web.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" Id="How_gH_pages_are_used">
+    <header>How GitHub pages are used</header>
+    <article>
+      <p class="description">
+        <OL type="1">
+          <li>First of all,<strong> install Git</strong> on your pc. This is the underlying version control system software on which GitHub works.           </li>
+          <li>Next, Sign up for a GitHub account. It is simple and easy.</li>
+          <li>Once you have registered, log in to github.com with your username and password.</li>
+      </OL>
+      </p>
+      <p class="description">
+        You can store any code you want in a Github repository, but to use the Github pages feature with full effect, your code must be structured like a typical website, for example that the primary entry point is an HTML file called index.html</p>
+<p>
+The other thing you need to do before moving on is to initialize the code directory as a Git repository. to do this:
+    </p>
+    <ol type="1">
+      <li>Point the command line to your<strong> test-site</strong> directory (or whatever the directory that contains your website is called). For this, use the<strong> cd</strong> command (ie "change of directory"). This is what you should type if you have placed your website in a directory called<strong> test-site</strong> on your desktop:</li> 
+      <br>
+      <code>cd Desktop/test-site</code>
+      <li>
+When the command line is pointing inside your website's directory, type the following command, which tells the git tool to convert the directory into a git repository:</li>
+      <code>git init</code>
+      <li>Next, you need to create a new repository to place your files in it. Click on the plus sign (+) at the top right of the GitHub home page, then choose New Repository.</li>
+      <li>On this page, in the Repository Name box, type the name for your code repository, for example my-repository</li>
+      <li>También llena una descripción para decir lo que tu repositorio va a contener.</li>
+      <li>Click on Create repository</li>
+      <li>En la página actual, tú estás interesado en la sección …o empujar un repositorio existente desde la línea de comandos. Tú deberias ver dos lineas de código listado en esta sección. Copia la totalidad de la primera línea, pégala en la línea de comandos, presiona la tecla Enter. El comando debería mostrarte algo como esto:</li>
+      <code>git remote add origin https://github.com/chrisdavidmills/my-repository.git</code>
+      <li>Next, type the following two commands, pressing Enter after each one. They will prepare the code to upload it to GitHub, and ask GIt to manage these files</li>
+      <code>git add --all<br>
+        git commit -m 'adding my files to my repository'</code>
+      <li>Finally, push the code to GitHub by going to the GitHub page where you are and entering the second of the two commands we saw in the terminal ... or push an existing repository from the command line section:</li>
+      <code>git push -u origin master</code>
+      <li>Now you need to create the gh-pages branch of your repository; refresh the current page and you will see a repository page something like the one below. You need to press the button that says Branch: master, type gh-pages in the text field, then press the blue button that says Create branch: gh-pages. This creates a branch of special code called gh-pages that is published in a special location. The URL takes the form username.github.io/my-repository-name, so in my case example, the URL should be https://chrisdavidmills.github.io/my-repository.</li>
+      <li>Browse your GitHub pages web address in a new browser tab, and you should see your site online! Email it to your friends and show your domain.</li>
+      </OL>
+      </p>
+    </article>
+</section>
+<section class="main-section" Id="Import_your_code_to_GitHub">
+  <header>Import your code to GitHub</header>
+  <article>
+    <p>
+      <ol>
+      <li>This step will put your files onto GitHub so that anyone who types in yourUsername.github.io will be able to see your website. Currently your website only exists on your laptop.</li>
+<li>If you know version control and are familiar with GitHub, upload the files to your repository any way you would like to and you are done with this step.
+If you are new to GitHub and version control, I’d suggest using the GitHub website. Step 1 will have created a new repository (repo for short) for you, titled yourUsername.github.io.</li>
+<li>Click on “upload files” (bottom right of the screenshot) and drag and drop all your unzipped files from CodePen.</li>
+<li>That should be it! Now give GitHub a bit of time to digest (GitHub recommends 10 minutes) before typing in https://yourUsername.github.io into a web browser. If you can’t see anything, hard refresh your browser so it is not loading from the cache. On a Mac, the keyboard shortcut for hard refresh is shift + command + r.</li>
+        </ol>
+If you don’t know what version control is, now is the time to Google it whilst you wait for your site.<br>
+ Ta-dah! Well done on getting your website up and running on GitHub!
+    </p>
+  </article>
+</section>
+<section class="main-section" Id="References">
+  <header>References</header>
+  <article>
+    <ul>
+      <li>All the documentation in this page is taken from
+        <a href="https://help.github.com/en/github/getting-started-with-github" target="_blank">GitHub Help</a> 
+      </li>
+    </ul>
+  </article>
+</section>
+</main>
+
+  </body>
+   </html>
+
+    
+   
+   
+   
+   
+   
+   
